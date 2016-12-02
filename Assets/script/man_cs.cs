@@ -79,6 +79,7 @@ public class man_cs : MonoBehaviour {
         my.yw = gameObject.GetComponent<SpriteRenderer>().bounds.size.y;
        
         stage_shokika();
+	
     }
 
     void stage_shokika()
@@ -396,6 +397,9 @@ public class man_cs : MonoBehaviour {
     void enemy_start()
     {
         my.enemy_num = my.stage*4+25;
+		if (my.enemy_num >= 50) {
+			my.enemy_num = 50;
+		}
         for (int i = 0; i < my.enemy_num; i++)
         {
             enemy_on();
@@ -604,7 +608,7 @@ public class man_cs : MonoBehaviour {
                 y = Input.mousePosition.y;
             }
             //if (y == 0) { y = Screen.height * 0.3f; }
-            return y + max_y() / 20; 
+            return y + max_y() / 10; 
         }
         public int ons()
         {

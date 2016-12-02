@@ -29,7 +29,7 @@ public class enemy_sc: MonoBehaviour
         xw = enemy_pic.bounds.size.x;
         yw = enemy_pic.bounds.size.y;
 
-        enemy_shot_sec = 5 + my.stage;
+		enemy_shot_sec = 5 + (int)(my.stage / 3); if (enemy_shot_sec>=8){enemy_shot_sec = 8;}
         //enemy_shot_sec = 1;
         if (kind == 1) { enemy_shot_sec = 1; }
         if (kind == 2) { enemy_shot_sec = 3; }

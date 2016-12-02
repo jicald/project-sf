@@ -123,7 +123,6 @@ public class title_cs : MonoBehaviour {
         }
         if (to_panel == "kakunin_ok")
         {
-			my.save_mode ();
             kakunin_panel_d.SetActive(false);
             SceneManager.LoadScene("ranking");
         }
